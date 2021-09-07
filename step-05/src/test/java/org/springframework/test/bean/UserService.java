@@ -5,12 +5,13 @@ package org.springframework.test.bean;
  * @Date: 2021/9/6 11:01
  */
 public class UserService {
+
     private String uId;
 
     private UserDao userDao;
 
-    public void queryUserInfo() {
-        System.out.println("查询用户信息：" + userDao.queryUserName(uId));
+    public String queryUserInfo() {
+        return userDao.queryUserName(uId);
     }
 
     public String getuId() {
@@ -29,3 +30,4 @@ public class UserService {
         this.userDao = userDao;
     }
 }
+
