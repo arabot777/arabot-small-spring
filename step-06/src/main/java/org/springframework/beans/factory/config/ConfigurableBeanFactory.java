@@ -1,5 +1,6 @@
 package org.springframework.beans.factory.config;
 
+import org.springframework.beans.factory.BeanPostProcessor;
 import org.springframework.beans.factory.HierarchicalBeanFactory;
 
 /**
@@ -12,4 +13,5 @@ public interface ConfigurableBeanFactory extends HierarchicalBeanFactory, Single
 
     String SCOPE_PROTOTYPE = "prototype";
 
+    void addBeanPostProcessor(BeanPostProcessor beanPostProcessor);
 }
